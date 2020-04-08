@@ -2,28 +2,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Log In</title>
-	<link href="//db.onlinewebfonts.com/c/a4e256ed67403c6ad5d43937ed48a77b?family=Core+Sans+N+W01+35+Light" rel="stylesheet" type="text/css"/>
+	<title>Registration system PHP and MySQL</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<form class="form" action="login.php" method="post" autocomplete="off">
+
+	<div class="header">
+		<h2>Login</h2>
+	</div>
+	
+	<form method="post" action="login.php">
 
 		<?php include('errors.php'); ?>
-		<div class="body-content">
-		  <div class="module">
-		    <h1>Log In</h1>
-		      <div class="alert alert-error"></div>
-		      <input type="text" placeholder="User Name" name="username" required />
-		      <input type="email" placeholder="Email" name="email" required />
-		      <input type="password" placeholder="Password" name="password" autocomplete="new-password" required />
-		      <input type="submit" value="Login" name="login_user" class="btn btn-block btn-primary" />
-		    </form>
-		  </div>
+
+		<div class="input-group">
+			<input type="text" placeholder="User Name" name="username" >
+		</div>
+		<div class="input-group">
+			
+			<input type="password" placeholder="Password" name="password">
+		</div>
+		<div class="input-group">
+			<button type="submit" class="btn" name="login_user">Login</button>
 		</div>
 		<p>
 			Not yet a member? <a href="register.php">Sign up</a>
 		</p>
 	</form>
+
+
 </body>
 </html>
